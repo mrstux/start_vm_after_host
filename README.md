@@ -18,9 +18,17 @@ I use this to activate my VM's after my pfSense VM finishes starting. I call the
 
 starts a vm by name
 
+## stop_vm_by_name
+
+stops a vm by name
+
 ## wait_for_ssh
 
 waits for a host's ssh port to begin responding
+
+## print_vm_ids
+
+prints a list of all vm names and their ids
 
 ## Other Scripts
 
