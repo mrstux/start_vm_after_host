@@ -1,6 +1,7 @@
 # Stux's TrueNAS Scripts
 
-[https://github.com/mrstux/truenas_scripts](https://github.com/mrstux/truenas_scripts)
+[github.com/mrstux/truenas_scripts](https://github.com/mrstux/truenas_scripts)
+[TrueNAS Resource Post & Discussion](https://www.truenas.com/community/resources/scripts-to-start-vm-when-another-host-vm-finishes-booting.249/)
 
 Some simple TrueNAS scripts. Not all are my own work.
 
@@ -33,4 +34,6 @@ prints a list of all vm names and their ids
 ## Other Scripts
 
 [Hybrid Fan Controller](https://github.com/mrstux/hybrid_fan_control)
+
+[Spearfoot's Disk Burnin and Testing](https://github.com/Spearfoot/disk-burnin-and-testing)
 

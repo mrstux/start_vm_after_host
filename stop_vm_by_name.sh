@@ -14,10 +14,8 @@ fi
 VMNAME=$1
 
 # get VM ID
-ID=`midclt call vm.query |
-     jq --raw-output '[.[] | { (.name): .id } ]' |
-     grep $VMNAME |
-     sed 's/.*\:\(.*\)/\1/'`
+# https://stackoverflow.com/questions/36625131/how-to-search-a-json-with-jq-for-values
+ID=`midclt call vm.query | jq --arg vmname $VMNAME '.[] | select(.name == $vmname) | .id'`
 
 echo "Stop '$VMNAME': id=$ID"
 midclt call vm.stop $ID
