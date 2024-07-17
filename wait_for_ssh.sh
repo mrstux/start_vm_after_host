@@ -5,8 +5,8 @@
 
 HOST=$1
 PORT=$2
-#HOST="localhost"
-#PORT=8022
+TIMEOUT=$3
+
 if [ -z "$1" ]
   then
     echo "Missing argument for host."
@@ -20,9 +20,8 @@ if [ -z "$2" ]
 fi
 echo "polling to see that host is up and ssh is ready"
 RESULT=1 # 0 upon success
-TIMEOUT=30 # number of iterations (5 minutes?)
 while :; do 
-    echo "waiting for host ssh response..."
+    echo "waiting for host ssh response, ${TIMEOUT} check iterations remaining..."
     # https://serverfault.com/questions/152795/linux-command-to-wait-for-a-ssh-server-to-be-up
     # https://unix.stackexchange.com/questions/6809/how-can-i-check-that-a-remote-computer-is-online-for-ssh-script-access
     # https://stackoverflow.com/questions/1405324/how-to-create-a-bash-script-to-check-the-ssh-connection
