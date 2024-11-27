@@ -13,7 +13,9 @@ Starts a vm after another host comes online
 
 I use this to activate my VM's after my pfSense VM finishes starting. I call the script as a post-init command with my pfSense VM's IP and the vm name ie
 
-`/mnt/tank/server/scripts/truenas_scripts/start_vm_after_host.sh <pfsense ip> 22 <vm name>`
+`/mnt/tank/server/scripts/truenas_scripts/start_vm_after_host.sh <pfsense ip> 22 ssh <vm name>`
+
+`ssh` can also be `generic` for a tcp check
 
 ## start_vm_by_name
 
